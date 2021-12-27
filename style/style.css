@@ -1,0 +1,87 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    margin: 0;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:link{
+    color: white;
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: #263238;
+    color: white;
+}
+
+.header h1{
+    margin-right: 15px;
+}
+.header form{
+    margin-left: 15px;
+}
+
+input{
+    height: 32px;
+    font-size: 1.1rem;
+    border: 0px;
+    margin: 0px;
+    background-color: white;
+}
+button{
+    height: 32px;
+    border: 0px;
+    margin: 0px;
+    background-color: white;
+}
+
+#user_output_par{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#user_output{
+    width: 40%;
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+    align-items: center;
+}
+
+#icon img{
+    border-radius: 100px;
+    display: inline-block;
+}
+
+#username{
+    font-size: 1.5rem;
+}
+
+#Base{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#Base div{
+    width: 250px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
