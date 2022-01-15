@@ -1,5 +1,5 @@
 document.getElementById('search').onsubmit = function(){
-    var api_key = 'RGAPI-225ffd4e-6c29-423d-9d29-6271186f0f89';
+    var api_key = 'RGAPI-af6acb89-e5e2-4ffb-87e7-78bc79d6a627';
     var name = this.name.value;
 
     var name_output = document.querySelector('#username');
@@ -18,6 +18,7 @@ document.getElementById('search').onsubmit = function(){
     fetch('https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/'+name+'?api_key='+api_key)
     .then(reponse=>reponse.json())
     .then(data => {
+        console.log(data);
         var puuid = data['puuid'];
         var icon_code = data['profileIconId'];
         var level = data['summonerLevel'];
@@ -59,6 +60,7 @@ document.getElementById('search').onsubmit = function(){
         fetch('https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/'+puuid+'/ids?start=0&count=20&api_key='+api_key)
         .then(response=>response.json())
         .then(data=>{
+            console.log(data);
         //puuid로 match id값 가져오기
 
         document.getElementById("Base").innerHTML = "";
@@ -67,6 +69,7 @@ document.getElementById('search').onsubmit = function(){
             fetch('https://asia.api.riotgames.com/lol/match/v5/matches/'+data[i]+'?api_key='+api_key)
             .then(response=>response.json())
             .then(data=>{
+                console.log(data);
                 //match id로 매칭 정보 가져오기
                 
                 var gameID_main = data['info']['gameId'];
